@@ -13,6 +13,7 @@ title: Fetch
 			console.log(data)
 			content = data.content
 			console.log(content)
+			console.log(atob(content))
 		}).catch(error => {
 			console.log(error)
 			return []
