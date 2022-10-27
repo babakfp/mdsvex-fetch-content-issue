@@ -1,5 +1,5 @@
 ---
-title: Svelte OutClick
+title: Fetch
 ---
 
 <script>
@@ -8,7 +8,6 @@ title: Svelte OutClick
 	let content
 	onMount(async () => {
 		fetch('https://api.github.com/repos/babakfp/test/contents/README.md')
-		// fetch('https://api.github.com/repos/babakfp/svelte-outclick/contents/README.md')
 		.then(response => response.json())
 		.then(data => {
 			console.log(data)
@@ -20,8 +19,6 @@ title: Svelte OutClick
 		})
 	})
 </script>
-
-This is *Svelte OutClick* content.
 
 <!--
 	❌ ERROR: </p> attempted to close an element that was not open
@@ -36,4 +33,6 @@ This is *Svelte OutClick* content.
 	✅ ERROR goes away: </p> attempted to close an element that was not open
 	❌ but content doesn't get converted to HTML!
 -->
-{@html content ? atob(content) : 'Loading...'}
+<!-- {@html content ? atob(content) : 'Loading...'} -->
+
+{content}

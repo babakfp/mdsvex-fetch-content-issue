@@ -2,11 +2,18 @@
   import '../app.postcss'
 </script>
 
-<ul class="flex bg-gray-100">
-	<a class="block p-4 text-sky-700 font-medium hover:text-sky-900" href="/">Home</a>
-	<a class="block p-4 text-sky-700 font-medium hover:text-sky-900" href="/blog">Blog</a>
-</ul>
+<header class="border-b border-gray-100">
+	<ul class="container mx-auto p-4 flex gap-4">
+		<li>
+			<a class="block py-2 px-4 bg-sky-50 rounded font-medium duration-150 hover:bg-sky-100 hover:text-sky-900"
+				href="/"
+			>
+				GO HOME
+			</a>
+		</li>
+	</ul>
+</header>
 
-<main class="container px-4 mt-8">
+<main class="container mx-auto p-4 pb-8">
 	<slot />
 </main>
