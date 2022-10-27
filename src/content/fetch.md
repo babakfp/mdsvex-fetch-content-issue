@@ -7,7 +7,7 @@ title: Fetch
 
 	let content
 	onMount(async () => {
-		fetch('https://api.github.com/repos/babakfp/test/contents/README.md')
+		fetch('https://api.github.com/repos/babakfp/fetch-test-repo/contents/README.md')
 		.then(response => response.json())
 		.then(data => {
 			console.log(data)
