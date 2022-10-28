@@ -23,12 +23,14 @@ title: Fetch
 
 <!--
 	❌ ERROR: </p> attempted to close an element that was not open
+	https://github.com/pngwn/MDsveX/issues/478#issuecomment-1293005387
 -->
-<!-- {#if content}
+{#if content}
 	{@html atob(content)}
 {:else}
 	Loading...
-{/if} -->
+
+{/if}
 
 <!--
 	✅ ERROR goes away: </p> attempted to close an element that was not open
@@ -36,4 +38,4 @@ title: Fetch
 -->
 <!-- {@html content ? atob(content) : 'Loading...'} -->
 
-{content}
+<!-- {content} -->
